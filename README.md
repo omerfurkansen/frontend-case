@@ -1,16 +1,17 @@
-## Case:
-Oncelikle bu repository'yi clonelayın ve bir web uygulaması oluşturun. İstenilen detayları aşağıda bulabilirsiniz.
+## Description
+Test task for the position of Frontend Developer
+Author: [Omer Furkan Sen](https://www.linkedin.com/in/omerfurkansen/)
+Deployed at: [Demo Link](https://omerfsen-testcase.netlify.app/)
 
-## Verilen assetler:
-* multi-select içinde gösterilecek JSON data.
-* Multi-select tasarımı jpg olarak.
-* Search-icon (svg)
+# Getting Started with Create React App
 
-## Gereksinimler:
-* React vs Typescript
-* Tasarima uygun multi-select implementasyonu ve http kullanarak verilen JSON verilerinin gösterilmesi
-* JSON verilerini filtreleyebilecek bir arama yapılması
-* Birden fazla öğe secılebilmeli
-* Seçilen öğelerin en üstte sıralanması gerekiyor, ayrıca arama filtresinden etkilenmemeleri gerekiyor
-* Browser refresh edilince seçili öğelerin hatırlanması
-* Exception handling ve hata gosterimi
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn` and `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
