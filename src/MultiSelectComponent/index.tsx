@@ -82,6 +82,22 @@ const MultiSelect: React.FC = () => {
     receiveApiData();
   }
 
+  const handleOptionClick = (option: Kategori) => {
+    if (selected.includes(option)) {
+      setSelected(selected.filter(item => item !== option));
+    } else {
+      setSelected([...selected, option]);
+    }
+  }
+
+  const filterFunction = (option: Kategori) => {
+    if (selected.includes(option)) {
+      return true;
+    } else {
+      return option.toLowerCase().includes(search.toLowerCase());
+    }
+  }
+
   const showSkeleton = (options.length === 0 && isLoading);
   const showNoResult = (options.filter(option => option.toLowerCase().includes(search.toLowerCase())).length === 0 && !isLoading);
   const showOptions = (options.length > 0 && !isLoading);
@@ -92,29 +108,20 @@ const MultiSelect: React.FC = () => {
 
   const renderOptions = (
     options
-      .filter(option => {
-        if (selected.includes(option)) {
-          return true;
-        } else {
-          return option.toLowerCase().includes(search.toLowerCase());
-        }
-      })
+      .filter(option => filterFunction(option))
       .map(option => (
         <div
           key={option}
           className="MultiSelect__option"
-          onClick={() => {
-            if (selected.includes(option)) {
-              setSelected(selected.filter(item => item !== option));
-            } else {
-              setSelected([...selected, option]);
-            }
-          }}
+          onClick={() => handleOptionClick(option)}
         >
           <button className={selected.includes(option) ? 'selected' : ''}>
             {selected.includes(option) && <div className="MultiSelect__option__square"/>}
           </button>
-          <div className="MultiSelect__option-label" style={{ color: selected.includes(option) ? '#0056b3' : 'black' }}>
+          <div 
+            className="MultiSelect__option-label" 
+            style={{ color: selected.includes(option) ? '#0056b3' : 'black' }}
+          >
             {option}
           </div>
         </div>
