@@ -1,6 +1,8 @@
 ## Description
 Test task for the position of Frontend Developer
+
 Author: [Omer Furkan Sen](https://www.linkedin.com/in/omerfurkansen/)
+
 Deployed at: [Demo Link](https://omerfsen-testcase.netlify.app/)
 
 # Getting Started with Create React App
